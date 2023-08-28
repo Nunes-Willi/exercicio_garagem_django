@@ -21,10 +21,10 @@ class Veiculo(models.Model):
 
     preco = models.DecimalField(
         max_digits=7, decimal_places=2, default=0, null=True, blank=True)
-    
+
     acessorio = models.ManyToManyField(Acessorio, related_name="Acessórios")
 
     def __str__(self):
         return f"{self.modelo}, {self.marca}, {self.ano}, {self.cor}, ({self.id})"
     class Meta:
-        verbose_name = "Veículo"
+        verbose_name = "Veículos"
