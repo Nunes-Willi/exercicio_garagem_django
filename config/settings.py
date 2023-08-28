@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'rest_framework',
     "rest_framework_simplejwt",
     "usuario",
+    "uploader",
     'garagem',
 ]
 
@@ -143,3 +144,10 @@ REST_FRAMEWORK = {
 }
 
 AUTH_USER_MODEL = "usuario.Usuario"
+
+import os
+
+MEDIA_URL = "http://localhost:8000/media/"
+MEDIA_ENDPOINT = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
+FILE_UPLOAD_PERMISSIONS = 0o640
