@@ -3,18 +3,18 @@ from django.urls import path, include
 from usuario.router import router as usuario_router
 from django.conf import settings
 from django.conf.urls.static import static
+from rest_framework.routers import DefaultRouter
+
+
+from uploader.router import router as uploader_router
+
+from garagem.views import (MarcaViewSet, CategoriaViewSet, CorViewSet, AcessorioViewSet, VeiculoViewSet, ModeloViewSet)
 
 from drf_spectacular.views import (
     SpectacularAPIView,
     SpectacularRedocView,
     SpectacularSwaggerView,
 )
-
-from rest_framework.routers import DefaultRouter
-
-from uploader.router import router as uploader_router
-
-from garagem.views import MarcaViewSet, CategoriaViewSet, CorViewSet, AcessorioViewSet, VeiculoViewSet, ModeloViewSet
 
 # from rest_framework_simplejwt.views import (
 #     TokenObtainPairView,

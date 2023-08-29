@@ -40,10 +40,11 @@ INSTALLED_APPS = [
     "corsheaders",
     'rest_framework',
     "rest_framework_simplejwt",
+    "drf_spectacular",
     "usuario",
     "uploader",
-    "drf_spectacular",
     'garagem',
+    "django_extensions",
 ]
 
 MIDDLEWARE = [
