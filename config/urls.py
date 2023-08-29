@@ -33,7 +33,7 @@ router.register(r"veiculos", VeiculoViewSet)
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include(router.urls)),
-    path("api/", include(usuario_router.urls)),
+    path("api/", include(router.urls)),
     path("api/media/", include(uploader_router.urls)),
     path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
     path(
@@ -44,9 +44,7 @@ urlpatterns = [
     path(
         "api/redoc/",
         SpectacularRedocView.as_view(url_name="schema"),
-        name="redoc",
-    ),
-    path("api/", include(router.urls)),
+        name="redoc",),
     # path("token/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
     # path("token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
 ]

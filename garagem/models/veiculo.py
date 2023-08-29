@@ -22,6 +22,6 @@ class Veiculo(models.Model):
     imagem = models.ManyToManyField(Image, related_name="Veículo")
 
     def __str__(self):
-        return f"{self.modelo}, {self.marca}, {self.ano}, {self.cor}, ({self.id})"
+        return f"{self.modelo}, {self.ano}, {self.cor}, ({self.id})"
     class Meta:
         verbose_name = "Veículo"
